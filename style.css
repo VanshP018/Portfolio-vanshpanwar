@@ -1,0 +1,675 @@
+
+body{
+    background-color: black;
+    overflow: scroll;
+    
+
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:1rem;
+    background-color: black;
+    color: white;  
+    position: relative;
+  
+    top:0;
+  
+
+}
+
+.nav-elements a{
+    padding: 3rem;
+    opacity: 0.6;
+    text-decoration: none;
+    color: white;
+
+}
+.nav-elements a:hover{
+
+    opacity: 1;
+
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.navbar::after , .navbar::before{
+    content: '';
+    position: absolute;
+    height:105%;
+    width:100%;
+    background-image: conic-gradient(from var(--angle),transparent 10%, blue);
+    left:0;
+    z-index: -1;
+
+    padding: 2rem;
+    animation: 3s spin linear infinite ;
+    
+}
+
+.navbar::before{
+    filter: blur(1rem);
+
+}
+
+.navbar img{
+    height: 3rem;
+    width: 3rem;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+.main{
+    color: white;
+    position: absolute;
+    top:20rem;
+    left:10rem;
+    width:50%;   
+
+}
+.main h3{
+    font-size: 3rem;
+   
+}
+.main h2{
+    font-size: 5rem;
+
+}
+
+.main p{
+    opacity:0.7;
+}
+
+.line1{
+    height:35rem;
+    width:1rem;
+    background-color: rgb(120, 120, 249);
+    position: absolute;
+    left: 9rem;
+    filter: blur(1.5rem);
+    animation: 7s fall alternate-reverse infinite;
+    
+    
+}
+.line{
+    height:35rem;
+    width:0.05rem;
+    background-color: rgb(120, 120, 249);
+    position: absolute;
+    left: 9rem;
+    animation: 7s fall alternate-reverse infinite;
+    
+    
+
+}
+
+@keyframes fall{
+    from{
+        height: 0rem;
+    }
+    to{
+        height:35rem;
+    }
+}
+
+
+.cpp{
+    position: absolute;
+    top:20rem;
+    left:55rem;
+    padding-left: 5rem;
+    padding-top: 0.3rem;
+    /* border: 1px solid white; */
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    animation: 3s spin linear infinite ;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.cpp::after,.cpp::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.cpp::before{
+    filter: blur(0.6rem);
+}
+.python{
+    position: absolute;
+    top:20rem;
+    left:75rem;
+    padding-left: 4rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+.python::after,.python::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.python::before{
+    filter: blur(0.6rem);
+}
+.html{
+    position: absolute;
+    top:25rem;
+    left:55rem;
+    padding-left: 5rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+.html::after,.html::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.html::before{
+    filter: blur(0.6rem);
+}
+
+.css{
+    position: absolute;
+    top:25rem;
+    left:75rem;
+    padding-left: 5.5rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+.css::after,.css::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.css::before{
+    filter: blur(0.6rem);
+}
+
+.bootstrap{
+    position: absolute;
+    top:30rem;
+    left:55rem;
+    padding-left: 3rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+.bootstrap::after,.bootstrap::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.bootstrap::before{
+    filter: blur(0.6rem);
+}
+.javascript{
+    position: absolute;
+    top:30rem;
+    left:75rem;
+    padding-left: 3rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+.javascript::after,.javascript::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.javascript::before{
+    filter: blur(0.6rem);
+}
+.photoshop{
+    position: absolute;
+    top:35rem;
+    left:55rem;
+    padding-left: 3rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+.photoshop::after,.photoshop::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.photoshop::before{
+    filter: blur(0.6rem);
+}
+.figma{
+    position: absolute;
+    top:35rem;
+    left:75rem;
+    padding-left: 5rem;
+    padding-top: 0.3rem;
+    border: 1px solid white;
+    width:15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+.figma::after,.figma::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(136, 0, 255),rgb(201, 252, 17),rgb(255, 140, 0));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.figma::before{
+    filter: blur(0.6rem);
+}
+
+
+.cred{
+    display:flex;
+    border-bottom: 1px solid rgb(124, 124, 238);
+    border-right: 1px solid rgb(114, 114, 236);
+    width: 60%;
+    position: absolute;
+    top:60rem;
+    left:20rem;
+    border-radius: 10px;
+    background: rgb(97,89,89);
+    background: linear-gradient(90deg, rgba(97,89,89,1) 0%, rgba(0,0,0,1) 36%);
+}
+.cred div{
+    color: white;
+    border: 0.5px solid white;
+    margin: 2rem;
+    width: 15rem;
+    padding-left: 3rem;
+    border-radius: 10px;
+    background-color: black;
+    
+}
+
+
+
+.exp h3{
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+}
+.exp p{
+    opacity: 0.6;
+    padding-left: 1rem;
+}
+.followers h3{
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+.followers p{
+    padding-top: 0rem;
+    padding-left: 1.5rem;
+    opacity: 0.6;
+}
+.clients h3{
+    padding-top: 1rem;
+    padding-left: 4rem;
+}
+
+.projects{
+    position: absolute;
+    top:90rem;
+    color: white;
+    left:38rem;
+    font-size: 4rem;
+
+}
+.carde{
+    display: flex;
+    position: absolute;
+    top:100rem;
+    
+    left: 20rem;
+    border-top: 1px solid rgb(126, 126, 250);
+    border-left: 1px solid rgb(126, 126, 250);
+    /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 33%, rgba(50,47,47,1) 100%); */
+    border-radius: 20px;
+    overflow: hidden;
+   
+}
+.card{
+    margin: 5rem;
+    border: 1px solid white;
+    
+    
+
+}
+.card::after,.card::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),blue,rgb(108, 108, 239),rgb(232, 232, 3));
+    left:0;
+    top:0rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+
+    padding: 1rem;
+    animation: 3s spin linear infinite ;
+
+}
+.card::before{
+    filter: blur(0.6rem);
+}
+
+.pattern-img{
+    height:100vh;
+    width: 100%;
+    object-fit: contain;
+    z-index: 0;
+}
+.bttn{
+    margin-left: 20rem;
+    background-color: rgb(96, 96, 252);
+    color: white;
+}
+.bttn:hover{
+    margin-left: 20rem;
+    background-color: rgb(96, 96, 252);
+    color: white;
+}
+
+.social img{
+    height:2rem;
+    width: 2rem;
+    margin-right: 2rem;
+    opacity: 0.6;
+}
+.social img:hover{
+
+    opacity: 1;
+}
+
+.card-body p{
+    opacity: 0.6;
+}
+
+@keyframes appears{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+        
+    }
+    to{
+        opacity: 1;
+        transform:translateX(0px);
+        
+
+    }
+}
+
+.sky{
+    animation: appears linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
+}
+
+i{
+    position: absolute;
+    width: 4px;
+    height:4px;
+    background: rgb(117, 117, 239);
+    pointer-events: none;
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translate(0,0);
+        z-index: -1;
+    }
+    to{
+        opacity: 1;
+        transform: translate(var(--x),var(--y));
+        z-index: -1;
+    }
+}
+
+.projects{
+    animation: appears linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
+}
+
+.footer{
+    position: absolute;
+    top:150rem;
+    display: flex;
+    height: 13rem;
+    width: 100%;
+    background-color: black;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    opacity: 0.8;
+    
+    
+}
+
+.home-elements1{
+    margin-left: 5rem;
+    margin-right: 0rem;
+    color: white;
+    text-decoration: none;
+}
+.home-elements1:hover{
+    margin-left: 5rem;
+    margin-right: 0rem;
+    color: white;
+    opacity: 1;
+    
+}
+.home-elements2{
+    margin-left: 0rem;
+    margin-right: 0rem;
+    position: absolute;
+    left:20rem;
+    color: white;
+}
+
+.copyright{
+    position:absolute;
+    color: white;
+    left:40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-elements{
+    color: white;
+    position: absolute;
+    left: 80rem;
+    
+}
+.footer div{
+    opacity: 1;
+}
+.icons123 img{
+    height: 2rem;
+    width: 2rem;
+    opacity: 0.5;
+
+}
+
+.icons123 img:hover{
+    height: 2rem;
+    width: 2rem;
+    opacity: 1;
+
+}
+.icons123{
+    display: flex;
+    justify-content: space-between;
+}
+.line-love{
+    height: 0.1rem;
+    width: 10rem;
+    background-color: rgb(143, 143, 255);
+    position: absolute;
+    top: 149.8rem;
+    animation: 3s annoy alternate-reverse infinite;
+    
+
+}
+.line-love1{
+    height: 1rem;
+    width: 10rem;
+    background-color: rgb(143, 143, 255);
+    position: absolute;
+    top: 149rem;
+    filter: blur(2rem);
+    animation: 3s annoy alternate-reverse infinite;
+}
+
+@keyframes annoy {
+    from{
+        width: 0;
+
+    }
+    to{
+        width: 100%;
+    }
+}
